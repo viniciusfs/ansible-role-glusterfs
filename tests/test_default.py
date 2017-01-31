@@ -19,5 +19,5 @@ def test_glusterfs_package(Package):
 def test_glusterfs_started_enabled(Service):
     glusterfs = Service('glusterd')
 
-    assert glusterfs.is_started
+    assert glusterfs.is_running
     assert glusterfs.is_enabled
