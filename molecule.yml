@@ -1,4 +1,19 @@
 ---
+docker:
+  containers:
+    - name: node1
+      ansible_groups:
+        - glusterfs
+      image: centos/systemd
+      image_version: latest
+      privileged: True
+    - name: node2
+      ansible_groups:
+        - glusterfs
+      image: centos/systemd
+      image_version: latest
+      privileged: True
+
 vagrant:
   platforms:
     - name: centos-7
